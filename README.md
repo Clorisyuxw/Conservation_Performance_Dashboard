@@ -29,14 +29,27 @@ This project develops a structured conservation risk framework and reporting das
 
 ```mermaid
 flowchart TD
-    A[Raw Biodiversity Data<br/>Kaggle] --> B[Data Cleaning & Validation]
-    B --> C[Data Quality Assessment]
-    C --> D[Risk Framework Development]
-    D --> E[Sensitivity Analysis]
-    E --> F[SQL Analysis<br/>SQLite]
-    F --> G[Dashboard Dataset Preparation]
-    G --> H[Power BI Dashboard]
-    H --> I[Insights & Recommendations]
+    A[Raw Biodiversity Data]
+    B[Data Cleaning and Validation]
+    C[Data Quality Assessment]
+    D[Risk Framework Development]
+    E[Sensitivity Analysis]
+    F[SQL Analysis using SQLite]
+    G[Dashboard Dataset Preparation]
+    H[Power BI Dashboard]
+    I[Insights and Recommendations]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+```
+
+## Data Quality Assessment
 
 ## Data Quality Assessment
 
