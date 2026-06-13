@@ -27,53 +27,16 @@ This project develops a structured conservation risk framework and reporting das
 
 ## Project Workflow
 
-┌────────────────────┐
-│ Raw Biodiversity   │
-│ Data (Kaggle)      │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│ Data Cleaning &    │
-│ Validation         │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│ Data Quality       │
-│ Assessment         │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│ Risk Framework &   │
-│ Sensitivity Test   │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│ SQL Analysis       │
-│ (SQLite)           │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│ Dashboard Dataset  │
-│ Preparation        │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│ Power BI Dashboard │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│ Insights &         │
-│ Recommendations    │
-└────────────────────┘
-
----
+```mermaid
+flowchart TD
+    A[Raw Biodiversity Data<br/>Kaggle] --> B[Data Cleaning & Validation]
+    B --> C[Data Quality Assessment]
+    C --> D[Risk Framework Development]
+    D --> E[Sensitivity Analysis]
+    E --> F[SQL Analysis<br/>SQLite]
+    F --> G[Dashboard Dataset Preparation]
+    G --> H[Power BI Dashboard]
+    H --> I[Insights & Recommendations]
 
 ## Data Quality Assessment
 
