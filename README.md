@@ -27,30 +27,51 @@ This project develops a structured conservation risk framework and reporting das
 
 ## Project Workflow
 
-```text
-Raw Biodiversity Data
+┌────────────────────┐
+│ Raw Biodiversity   │
+│ Data (Kaggle)      │
+└─────────┬──────────┘
           │
           ▼
-Data Cleaning & Validation
+┌────────────────────┐
+│ Data Cleaning &    │
+│ Validation         │
+└─────────┬──────────┘
           │
           ▼
-Data Quality Assessment
+┌────────────────────┐
+│ Data Quality       │
+│ Assessment         │
+└─────────┬──────────┘
           │
           ▼
-Risk Score Framework Development
+┌────────────────────┐
+│ Risk Framework &   │
+│ Sensitivity Test   │
+└─────────┬──────────┘
           │
           ▼
-SQL-Based Conservation Analysis
+┌────────────────────┐
+│ SQL Analysis       │
+│ (SQLite)           │
+└─────────┬──────────┘
           │
           ▼
-Dashboard Dataset Preparation
+┌────────────────────┐
+│ Dashboard Dataset  │
+│ Preparation        │
+└─────────┬──────────┘
           │
           ▼
-Power BI Reporting & Visualisation
+┌────────────────────┐
+│ Power BI Dashboard │
+└─────────┬──────────┘
           │
           ▼
-Insights & Recommendations
-```
+┌────────────────────┐
+│ Insights &         │
+│ Recommendations    │
+└────────────────────┘
 
 ---
 
@@ -87,18 +108,26 @@ Results should therefore be interpreted as conservation risk indicators rather t
 
 ## Conservation Risk Framework
 
-A conservation risk score was developed using conservation status classifications.
+A weighted conservation risk framework was developed using conservation status classifications.
 
-| Conservation Status | Risk Score |
-|---------------------|------------|
+| Conservation Status | Weight |
+|---------------------|---------|
 | Endangered | 5 |
 | Threatened | 4 |
-| Species of Concern | 3 |
-| In Recovery | 2 |
-| Other Status | 1 |
+| Proposed Endangered | 4 |
+| Proposed Threatened | 3 |
+| Species of Concern | 2 |
+| In Recovery | 1 |
+| Under Review | 1 |
+| No Special Status | 0 |
 
-This framework enabled conservation records to be prioritised and compared across parks, states, and species categories.
+The framework enabled conservation records to be prioritised and compared across parks, states, and species categories.
 
+### Sensitivity Analysis
+
+To assess the robustness of the framework, an alternative weighting model was developed that placed greater emphasis on critically threatened species.
+
+Park rankings were recalculated under both models and compared. Results showed that the highest-risk parks remained consistently ranked among the top priority locations, indicating that conservation risk prioritisation was reasonably stable under different weighting assumptions.
 ---
 
 ## Key Findings
@@ -212,3 +241,4 @@ https://www.kaggle.com/datasets/nationalparkservice/park-biodiversity
 This project demonstrates how conservation data can be transformed into actionable performance insights through data quality assessment, risk prioritisation, SQL analysis, and dashboard reporting.
 
 The workflow reflects common analytical activities performed in performance analysis, environmental reporting, business intelligence, and operational decision-support roles.
+
